@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House price prediction</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="MyApp">
+
+<div class="container" ng-controller="MyCtrl">
+  <div class="py-5 text-center">
+    <h2>House price prediction Ames, Iowa</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="mb-3">Price:</h4>
+
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Total (USD)</span>
+          <strong>{{ price | currency : "$" : 2}}</strong>
+        </li>
+      </ul>
+      
+    </div>
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">House Information</h4>
+      <form class="needs-validation" novalidate="" ng-submit="search()">
+
+        <div class="mb-3">
+          <label for="OverallQual">Overall Quality<span class="text-muted">(1-10: Overall material and finish quality)</span></label>
+          <input type="text" class="form-control" id="OverallQual" placeholder="7" ng-model="house.OverallQual">
+        </div>
+
+        <div class="mb-3">
+          <label for="YearBuilt">Year Built <span class="text-muted">(Original construction date)</span></label>
+          <input type="text" class="form-control" id="YearBuilt" placeholder="2000" ng-model="house.YearBuilt">
+        </div>
+
+        <div class="mb-3">
+          <label for="YearRemodAdd">Year Remodeled <span class="text-muted">(Remodel date)</span></label>
+          <input type="text" class="form-control" id="YearRemodAdd" placeholder="2000" ng-model="house.YearRemodAdd">
+        </div>
+
+        <div class="mb-3">
+          <label for="LotArea">Lot Area <span class="text-muted">(Lot size in square feet)</span></label>
+          <input type="text" class="form-control" id="LotArea" placeholder="1000" ng-model="house.LotArea">
+        </div>
+        
+        <div class="mb-3">
+          <label for="LotFrontage">Lot Frontage <span class="text-muted">(Linear feet of street connected to property)</span></label>
+          <input type="text" class="form-control" id="LotFrontage" placeholder="50" ng-model="house.LotFrontage">
+        </div>
+
+        <div class="mb-3">
+          <label for="GrLivArea">Ground built area <span class="text-muted">(Above grade (ground) living area square feet)</span></label>
+          <input type="text" class="form-control" id="GrLivArea" placeholder="600" ng-model="house.GrLivArea">
+        </div>
+  
+        <div class="mb-3">
+          <label for="stFlrSF">1st Floor SF <span class="text-muted">(First floor square feet)</span></label>
+          <input type="text" class="form-control" id="stFlrSF" placeholder="600" ng-model="house.stFlrSF">
+        </div>
+        
+        <div class="mb-3">
+          <label for="ndFlrSF">2nd Floor SF <span class="text-muted">(Second floor square feet)</span></label>
+          <input type="text" class="form-control" id="ndFlrSF" placeholder="0" ng-model="house.ndFlrSF">
+        </div>
+
+        <div class="mb-3">
+          <label for="FullBath"># Full Bath <span class="text-muted">(# Full bathrooms above grade)</span></label>
+          <input type="text" class="form-control" id="FullBath" placeholder="0" value="10" ng-model="house.FullBath">
+        </div>
+        
+        <div class="mb-3">
+          <label for="GarageCars"># Garage Cars <span class="text-muted">(Size of garage in car capacity)</span></label>
+          <input type="text" class="form-control" id="GarageCars" placeholder="0" ng-model="house.GarageCars">
+        </div>
+
+        <div class="mb-3">
+          <label for="Fireplaces">Fireplaces<span class="text-muted">(Number of fireplaces)</span></label>
+          <input type="text" class="form-control" id="Fireplaces" placeholder="0" ng-model="house.Fireplaces">
+        </div>
+
+        <!-- <div class="mb-3">
+          <label for="Street">Street <span class="text-muted">(Type of road access)</span></label>
+          <select class="custom-select d-block w-100" id="Street" ng-model="house.Street" ng-init="house.Street=Pave">
+            <option value="Pave">Pave</option>
+            <option value="Grvl">Gravel</option>
+          </select>
+        </div> -->
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Calculate price</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2017-2018 Anaconda Inc</p>
+  </footer>
+</div>
+
+</body>
+
+</html>

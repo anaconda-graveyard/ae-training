@@ -1,0 +1,26 @@
+name: fashion-mnist
+description: Training data using Tensorflow on the Fashion-MNIST Dataset
+
+commands:
+  default:
+    unix: python main.py
+    supports_http_options: true
+
+channels: []
+packages: []
+
+env_specs:
+  anaconda44_py35:
+    channels: []
+    packages:
+      - python=3.6
+      - notebook
+      - pip:
+        - numpy
+        - pandas
+        - tensorflow
+        - protobuf
+        - absl-py
+        - tensorboard
+        - werkzeug
+        - markdown
