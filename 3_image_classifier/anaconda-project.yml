@@ -1,0 +1,19 @@
+name: image_classifier_flask
+description: An example TensorFlow app with Flask
+
+commands:
+  default:
+    unix: python main.py
+    supports_http_options: true
+
+channels: []
+packages: []
+
+env_specs:
+  anaconda44_py35:
+    channels: []
+    packages:
+      - python=3.5
+      - tensorflow=1.1.0
+      - flask=0.12
+      - ipykernel=4.6

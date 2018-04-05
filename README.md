@@ -1,2 +1,2 @@
-# ac18-tutorial
-Kris &amp; Daniel Deep Dive
+# AnacondaCON '18 Tutorial
+## Up and Running with Anaconda Enterprise
