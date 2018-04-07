@@ -3,18 +3,18 @@ description: Training data using Tensorflow on the Fashion-MNIST Dataset
 
 commands:
   default:
-    unix: python main.py
+    unix: bash run.sh
     supports_http_options: true
 
 channels: []
 packages: []
 
 env_specs:
-  anaconda44_py35:
+  fashion:
     channels: []
     packages:
       - python=3.6
-      - notebook
+      - ipykernel
       - pip:
         - numpy
         - pandas
@@ -24,3 +24,6 @@ env_specs:
         - tensorboard
         - werkzeug
         - markdown
+        - bleach
+        - html5lib
+        - webencodings
