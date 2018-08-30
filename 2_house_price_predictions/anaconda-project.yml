@@ -1,5 +1,5 @@
 name: house_price_predictions
-description: House price prediction classifier with API endpoint
+description: House price prediction classifier with API endpoint (requires access to the full Anaconda repository).
 
 commands:
   default:

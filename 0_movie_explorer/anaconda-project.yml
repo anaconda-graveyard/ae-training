@@ -1,0 +1,21 @@
+name: movie-explorer-shiny
+description: An example R Shiny app
+
+commands:
+  default:
+    unix: R -e "shiny::runApp(appDir='./', port=8086, host='0.0.0.0')"
+    supports_http_options: true
+
+channels: []
+packages: []
+
+env_specs:
+  anaconda44_r:
+    channels: []
+    packages:
+      - r=3.4.3
+      - r-dbplyr=1.1.0
+      - r-ggvis=0.4.3
+      - r-dplyr=0.7.4
+      - r-rsqlite=2.0
+      - r-shiny=1.0.5

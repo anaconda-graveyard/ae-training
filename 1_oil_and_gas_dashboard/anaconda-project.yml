@@ -1,0 +1,28 @@
+name: oil-and-gas-dashboard
+description: An example dashboard with Plotly Dash
+
+commands:
+  default:
+    unix: python app.py
+    supports_http_options: true
+
+channels: []
+packages: []
+
+env_specs:
+  anaconda50_py36:
+    channels: []
+    packages:
+      - python=3.6.5
+      - decorator
+      - flask
+      - gunicorn=19.7.1
+      - pandas
+      - requests
+      - pip:
+        - plotly==2.4.1
+        - dash-core-components==0.18.1
+        - dash-html-components==0.8.0
+        - dash-renderer==0.11.3
+        - dash==0.21.0
+        - flask_compress

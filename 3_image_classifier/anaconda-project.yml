@@ -1,6 +1,5 @@
 name: image_classifier_flask
-description: An example TensorFlow app with Flask
-
+description: An example TensorFlow app with Flask (requires access to the full Anaconda repository and the internet).
 commands:
   default:
     unix: python main.py
