@@ -1,4 +1,4 @@
-# AnacondaCON '18 Tutorial
+# Anaconda Enterprise Training
 ## Up and Running with Anaconda Enterprise
 
 Tutorial Slides:
