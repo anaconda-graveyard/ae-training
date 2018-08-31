@@ -1,8 +1,3 @@
-# TODO:
-# Change default year range
-# Remove one plot
-# Maybe change well type
-
 # In[]:
 # Import required libraries
 import os
@@ -80,8 +75,8 @@ layout = dict(
         accesstoken=mapbox_access_token,
         style="dark",
         center=dict(
-            lon=-78.05,
-            lat=42.54
+            lat=30.27,
+            lon=-97.76
         ),
         zoom=7,
     )

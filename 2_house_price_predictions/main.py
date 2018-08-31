@@ -52,8 +52,8 @@ def get_record():
 class PredictHandler(PrepHandler):
     def get(self):
         df = get_record()
-        df.at[(0, 'OverallQual')] = self.get_argument("OverallQual", default=0)
-        df.at[(0, 'YearBuilt')] = self.get_argument("YearBuilt", default=0)
+        # df.at[(0, 'OverallQual')] = self.get_argument("OverallQual", default=0)
+        # df.at[(0, 'YearBuilt')] = self.get_argument("YearBuilt", default=0)
         df.at[(0, 'YearRemodAdd')] = self.get_argument("YearRemodAdd", default=0)
         df.at[(0, 'LotArea')] = self.get_argument("LotArea", default=0)
         df.at[(0, 'LotFrontage')] = self.get_argument("LotFrontage", default=0)
@@ -63,21 +63,9 @@ class PredictHandler(PrepHandler):
         df.at[(0, 'FullBath')] = self.get_argument("FullBath", default=0)
         df.at[(0, 'GarageCars')] = self.get_argument("GarageCars", default=0)
         df.at[(0, 'Fireplaces')] = self.get_argument("Fireplaces", default=0)
-        # df.at[(0, 'Street')] = self.get_argument("Street", default="Pave")
-        
+
         predictions = predict(df).tolist()[0]
         self.write(json.dumps(predictions))
-
-
-## Need to update this
-# class BatchHandler(PrepHandler):
-#     def post(self):
-#         data = self.request.body
-#         data = data.decode("utf-8")
-#         data = prep_data(data)
-#         predictions = classify(data)
-#         print(predictions)
-#         self.write(json.dumps(predictions.tolist()))
 
 
 def main(anaconda_project_hosts):
