@@ -10,10 +10,7 @@ import tornado.httpserver
 from tornado.options import define, options
 
 import pandas as pd
-import xgboost
-# from classify import prep_data, classify, transform_data
 from predict import predict
-
 
 root = os.path.dirname(__file__)
 static = os.path.join(root, 'static')

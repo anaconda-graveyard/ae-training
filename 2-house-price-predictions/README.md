@@ -1,8 +1,8 @@
 # House Price Prediction Application
 
-This is an example workflow for training a model in xgboost on house price data,
-writing a predictor function (`predict.py`), and developing a simple tornado
-web server application to query the predictor function.
+This is an example workflow for training a model in scikit-learn on house price
+data, writing a predictor function (`predict.py`), and developing a simple
+Tornado web server application to query the predictor function.
 
 ## Tasks
 
