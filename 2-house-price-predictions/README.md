@@ -6,24 +6,30 @@ web server application to query the predictor function.
 
 ## Tasks
 
-**Initial Model**
+**Deploy Model**
+
+* Deploy the model and generate predictions with different inputs
+* Determine the variable(s) with the highest impact on the selling price of the
+  house
+
+**Examine Model**
 
 * Run the `train.ipynb` notebook, check the accuracy of the model
-* Train and pickle the model using the notebook `train.ipynb`, then commit the
-  serialized model
-* Deploy the application and generate predictions with different inputs
-* Determine the variable(s) with the highest impact on the selling price of the house
+* Examine the contents of `main.py`, `predict.py`, `static/index.html`, and
+  `static/app.js`
 
-**Changes to Model**
+**Make Changes to Model**
 
 * Add fields for the `OverallQual` and `YearBuilt` features by uncommenting code
   in:
   * PredictHandler class in `main.py`
   * HTML form in the `House Information` section of `static/index.html`
-* Change the `alpha` parameter of the Lasso model to 0.0001 and compare the
-  accuracy
+* Change the `alpha` parameter of the Lasso model from 1 to 0.0001 and compare
+  the accuracy
+* Train, fit, and serialize the model using the notebook `train.ipynb`
+* Commit changes to the serialized model and application template
 
 **Redeploy Model**
 
-* Redeploy the application with the new model parameter and fields
+* Redeploy the new model version with modified parameters and fields
 * Determine the impact of the new variables on the selling price of the house
