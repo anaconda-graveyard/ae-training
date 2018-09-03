@@ -33,3 +33,4 @@ web server application to query the predictor function.
 
 * Redeploy the new model version with modified parameters and fields
 * Determine the impact of the new variables on the selling price of the house
+* Describe some limitations of the current version of the model

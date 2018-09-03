@@ -1,7 +1,6 @@
 # Anaconda Enterprise Training
-## Up and Running with Anaconda Enterprise
 
-Tutorial Slides:
+Training Slides:
 
 * Non-Technical: https://drive.google.com/open?id=1PoB-iPyFiHEh-WvrTBD8tCdQYHiUfetM
 
