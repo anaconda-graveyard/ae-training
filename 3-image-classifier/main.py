@@ -66,6 +66,8 @@ def upload_file():
                                     filename=filename))
     return '''
     <!doctype html>
+    <html>
+    <head>
     <style>
     h1, body {
         font-family: "Arial", Times, serif;
@@ -86,6 +88,7 @@ def upload_file():
     }
     #left_col {
        float:left;
+       padding: 15px;
        width:300px;
     }
     #right_col {
@@ -94,24 +97,31 @@ def upload_file():
     }
     </style>
     <title>Upload an image for classification</title>
-    <h1>Upload an image for classification</h1>
+    </head>
+    <body>
+    <h1>Image Classifier</h1>
+    Select a JPG, PNG, or GIF file from your local machine, then click the "Upload and Classify" button.
+    <br />
+    <br />
     <form method=post enctype=multipart/form-data>
-      <div id="weather_app">
+      <div id="image_app">
         <div id="left_col">
-          <center>
-            <label class="my-button-class" style="background-color: white;" for="my-file-selector">
-              <input id="my-file-selector" type="file" name=file style="display:none;"> Select a File
-            </label>
-          </center>
+            <center>
+            <input type="file" name="file"
+                     id="avatar" name="avatar"
+                     accept="image/png, image/jpeg, image/gif" />
+            </center>
         </div>
         <div style="right_col">
-        <input type=submit value=Upload class="button">
+        <input type="submit" value="Upload and Classify" class="button">
         </div>
       </div>
     </form>
     <p>
-    Image classification application powered by TensorFlow and Anaconda
+    Image classification application powered by TensorFlow and Anaconda.
     </p>
+    </body>
+    </html>
     '''
 
 @bp.route('/tmp/tensorflow_images/<filename>')
