@@ -20,13 +20,13 @@ web server application to query the predictor function.
 
 **Make Changes to Model**
 
+* Change the `alpha` parameter of the Lasso model from 1 to 0.0001 and compare
+  the accuracy
+* Train, fit, and serialize the model using the notebook `train.ipynb`
 * Add fields for the `OverallQual` and `YearBuilt` features by uncommenting code
   in:
   * PredictHandler class in `main.py`
   * HTML form in the `House Information` section of `static/index.html`
-* Change the `alpha` parameter of the Lasso model from 1 to 0.0001 and compare
-  the accuracy
-* Train, fit, and serialize the model using the notebook `train.ipynb`
 * Commit changes to the serialized model and application template
 
 **Redeploy Model**
