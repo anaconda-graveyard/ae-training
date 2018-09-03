@@ -6,7 +6,7 @@ web server application to query the predictor function.
 
 ## Tasks
 
-*Initial Model*
+**Initial Model**
 
 * Run the `train.ipynb` notebook, check the accuracy of the model
 * Train and pickle the model using the notebook `train.ipynb`, then commit the
@@ -14,7 +14,7 @@ web server application to query the predictor function.
 * Deploy the application and generate predictions with different inputs
 * Determine the variable(s) with the highest impact on the selling price of the house
 
-*Changes to Model*
+**Changes to Model**
 
 * Add fields for the `OverallQual` and `YearBuilt` features by uncommenting code
   in:
@@ -23,7 +23,7 @@ web server application to query the predictor function.
 * Change the `alpha` parameter of the Lasso model to 0.0001 and compare the
   accuracy
 
-*Redeploy model*
+**Redeploy Model**
 
 * Redeploy the application with the new model parameter and fields
 * Determine the impact of the new variables on the selling price of the house
