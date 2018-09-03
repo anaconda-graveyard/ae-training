@@ -10,7 +10,7 @@ channels: []
 packages: []
 
 env_specs:
-  anaconda44_r:
+  anaconda50_r:
     channels: []
     packages:
       - r=3.4.3

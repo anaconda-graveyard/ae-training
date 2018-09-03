@@ -1,3 +1,5 @@
+# Movie Database Explorer
+
 This is the source code for a movie explorer app which runs on R and Shiny. The data is a subset of data from [OMDb](http://www.omdbapi.com/), which in turn is from IMDb and Rotten Tomatoes. The data is saved in a SQLite database.
 
 To run it locally, you'll need to install the latest versions of [ggvis](http://ggvis.rstudio.com), [Shiny](http://shiny.rstudio.com), and [dplyr](https://github.com/hadley/dplyr), as well as [RSQLite](http://cran.r-project.org/web/packages/RSQLite/index.html).
@@ -13,3 +15,18 @@ After all these packages are installed, you can run this app by entering the dir
 ```s
 shiny::runApp()
 ```
+
+## Tasks:
+
+**Deploy and Example Application**
+
+* Deploy movie explorer application
+* Examine the contents of `global.R`, `server.R`, and `ui.R`
+* Review the dependencies in `anaconda-project.yml`
+* Explore the data set by changing variables in the application
+
+**Explore Data Set**
+
+* Determine the highest rated movie in the year you were born (or your favorite
+  year)
+* Determine the lowest rated movie with your favorite cast member

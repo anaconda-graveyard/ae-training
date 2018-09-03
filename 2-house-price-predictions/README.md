@@ -17,6 +17,8 @@ web server application to query the predictor function.
 * Run the `train.ipynb` notebook, check the accuracy of the model
 * Examine the contents of `main.py`, `predict.py`, `static/index.html`, and
   `static/app.js`
+* Review the data in the `data/` directory
+* Review the dependencies in `anaconda-project.yml`
 
 **Make Changes to Model**
 

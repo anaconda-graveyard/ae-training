@@ -9,7 +9,7 @@ channels: []
 packages: []
 
 env_specs:
-  anaconda44_py35:
+  anaconda50_py35:
     channels: []
     packages:
       - python=3.5
