@@ -27,6 +27,7 @@ The following are screenshots for the app in this repo:
     (2007-2017). This should be changed in the `update_year_slider` function!
   * Change default well status filter from "Active only" to "All".
   * Modify the mapbox to be centered on latitude 42.54, longitude -78.05.
+* Commit changes to the dashboard application
 
 **Redeploy Dashboard**
 
