@@ -25,9 +25,10 @@ The following are screenshots for the app in this repo:
 * Make the following changes to the dashboard via the `app.py` file:
   * Change default year range to last 10 years of data from (1990-2010) to
     (2007-2017). This should be changed in the `update_year_slider` function!
-  * Change default well status filter from "Active only" to "All".
-  * Modify the mapbox to be centered on latitude 42.54, longitude -78.05.
-* Commit changes to the dashboard application
+  * Change default well status filter from "Active only" to "All"
+  * Modify the mapbox to be centered on latitude 42.54, longitude -78.05
+* Commit the changes to the dashboard application: Enter `0.2.0` as the commit
+  message and tag, then click the "Commit" button
 
 **Redeploy Dashboard**
 

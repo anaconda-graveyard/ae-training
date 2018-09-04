@@ -14,6 +14,7 @@ Tornado web server application to query the predictor function.
 
 **Examine Model**
 
+* Change the default editor to JupyterLab in the project settings
 * Run the `train.ipynb` notebook, check the accuracy of the model
 * Examine the contents of `main.py`, `predict.py`, `static/index.html`, and
   `static/app.js`
