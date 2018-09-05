@@ -11,4 +11,4 @@ based on an uploaded image.
 * Review the dependencies in `anaconda-project.yml`
 * Upload a sample image to the classifier
 * Try to fool the classifier by searching for and uploading other images (Note:
-  Use PNG and JPG images)
+  Use images in PNG, JPG, or GIF format)
